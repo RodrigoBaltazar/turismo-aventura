@@ -1,4 +1,5 @@
 
+<!-- 
 @extends('layouts.app')
 
 @section('content')
@@ -11,4 +12,5 @@
     </div>
     <a href="{{ route('home') }}" class="text-blue-600 font-bold mt-4 inline-block">Voltar para a lista</a>
 </article>
-@endsection
+@endsection -->
+

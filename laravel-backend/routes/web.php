@@ -29,6 +29,7 @@ use App\Models\Event;
 
 Route::resource('events', EventController::class);
 Route::get('/events/{id}', [EventController::class, 'show'])->name('events');
+Route::get('/events/create', [EventController::class, 'create'])->name('events');
 
 
 Route::middleware('guest')->group(function () {
