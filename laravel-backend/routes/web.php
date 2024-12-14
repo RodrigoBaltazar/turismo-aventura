@@ -10,6 +10,8 @@ use App\Livewire\Auth\Register;
 use App\Livewire\Auth\Verify;
 use App\Livewire\ShowEvents;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\EventController;
+use App\Models\Event;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,6 +25,11 @@ use Illuminate\Support\Facades\Route;
 */
 
 // Route::view('/', 'welcome')->name('home');
+
+
+Route::resource('events', EventController::class);
+Route::get('/events/{id}', [EventController::class, 'show'])->name('events');
+
 
 Route::middleware('guest')->group(function () {
     Route::get('login', Login::class)
@@ -53,11 +60,9 @@ Route::middleware('auth')->group(function () {
         ->name('verification.verify');
 
 
-Route::get('/', ShowEvents::class)
-        ->name('home');
-        // ->middleware('auth');
-    
-
-    Route::post('logout', LogoutController::class)
+        
+        
+        Route::post('logout', LogoutController::class)
         ->name('logout');
-});
+    });
+    Route::get('/', [EventController::class, 'index'])->name('home');

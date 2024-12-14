@@ -16,6 +16,8 @@ return new class extends Migration
 
             $table->string('name');
             $table->string('dia');
+            $table->text('excerpt');
+            $table->string('image');
             $table->text('description');
 
             $table->timestamps();

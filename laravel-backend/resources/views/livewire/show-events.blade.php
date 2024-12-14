@@ -1,13 +1,15 @@
-	<div x-data="{ current: null, showModal: false }">
-    <div class="w-full flex justify-center px-32 mb-5">
+ 
+ <div x-data="{ current: null, showModal: false }">
+ Eventos
+ <div class="w-full flex justify-center px-32 mb-5">
         <input wire:model="search" id="search" name="search" type="text" class="appearance-none block w-96 px-3 py-2 m-5 border border-gray-300 rounded-md placeholder-gray-400 focus:outline-none focus:shadow-outline-blue focus:border-blue-300 transition duration-150 ease-in-" placeholder="Search query ..." />
     </div>
 
     <div class="bg-white min-w-0 flex-1 px-32 mb-5">
-        <template x-for="(event, index) in {{ json_encode($events->toArray()['data']) }}" :key="index">
-            <div class="border-b border-gray-100 p-5 cursor-pointer" x-on:click="current = job; showModal = true">
-                <h2 class="font-medium text-xl" x-text="job.name"></h2>
-                <p x-text="job.description"></p>
+        <template x-for="(events, index) in {{ json_encode($events->toArray()['data']) }}" :key="index">
+            <div class="border-b border-gray-100 p-5 cursor-pointer" x-on:click="current = events; showModal = true">
+                <h2 class="font-medium text-xl" x-text="events.name"></h2>
+                <p x-text="events.description"></p>
             </div>
         </template>
     </div>
