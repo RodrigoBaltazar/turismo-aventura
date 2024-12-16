@@ -32,6 +32,7 @@ module.exports = {
     },
     content: [
         './app/**/*.php',
+        './resources/**/*.blade.php',
         './resources/**/*.html',
         './resources/**/*.js',
         './resources/**/*.jsx',
