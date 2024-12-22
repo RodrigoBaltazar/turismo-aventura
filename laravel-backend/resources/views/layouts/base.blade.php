@@ -47,7 +47,39 @@
 
             @yield('body')
         </div>
+        <footer class="bg-gray-800 text-gray-300 py-8">
+            <div class="container mx-auto flex flex-wrap justify-around">
+                <!-- Sobre Nós -->
+                <div class="w-full sm:w-1/3 px-4 mb-6">
+                <h4 class="text-lg font-semibold mb-4">Sobre Nós</h4>
+                <p class="text-sm">
+                    Somos uma agência dedicada a oferecer soluções criativas e eficazes para o seu negócio.
+                </p>
+                </div>
+                <!-- Links Úteis -->
+                <div class="w-full sm:w-1/3 px-4 mb-6">
+                <h4 class="text-lg font-semibold mb-4">Links Úteis</h4>
+                <ul class="space-y-2">
+                    <li><a href="#servicos" class="hover:text-blue-400 transition">Serviços</a></li>
+                    <li><a href="#sobre" class="hover:text-blue-400 transition">Sobre</a></li>
+                    <li><a href="#contato" class="hover:text-blue-400 transition">Contato</a></li>
+                    <li><a href="#blog" class="hover:text-blue-400 transition">Blog</a></li>
+                </ul>
+                </div>
+                <!-- Contato -->
+                <div class="w-full sm:w-1/3 px-4 mb-6">
+                <h4 class="text-lg font-semibold mb-4">Contato</h4>
+                <p class="text-sm">Email: contato@agencia.com</p>
+                <p class="text-sm">Telefone: (11) 1234-5678</p>
+                <p class="text-sm">Endereço: Rua Exemplo, 123, São Paulo</p>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-6 pt-4 text-center">
+                <p class="text-sm">&copy; 2024 Agência Criativa. Todos os direitos reservados.</p>
+            </div>
+            </footer>
 
+        
         @livewireScripts
     </body>
 </html>
