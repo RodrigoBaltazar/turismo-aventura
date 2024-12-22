@@ -63,7 +63,8 @@ Route::middleware('auth')->group(function () {
 
         
         
-        Route::post('logout', LogoutController::class)
-        ->name('logout');
-    });
-    Route::get('/', [EventController::class, 'index'])->name('home');
+    Route::post('logout', LogoutController::class)
+    ->name('logout');
+});
+    
+Route::get('/', [EventController::class, 'index'])->name('home');
