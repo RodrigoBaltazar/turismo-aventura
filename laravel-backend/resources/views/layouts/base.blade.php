@@ -26,8 +26,9 @@
     </head>
 
     <body>
-        <div class="relative min-h-screen flex flex-col">
-            <nav class="flex-shrink-0 bg-indigo-600">
+        <div class="relative min-h-screen flex flex-col bg-fundo">
+            <!-- <nav class="flex-shrink-0 bg-primary-600"> -->
+            <nav class="flex-shrink-0 bg-primary-800">
                 <div class="max-w-7xl mx-auto px-8">
                     <div class="relative flex items-center justify-between h-16">
                         <div class="flex items-center px-2">
@@ -47,7 +48,7 @@
 
             @yield('body')
         </div>
-        <footer class="bg-gray-800 text-gray-300 py-8">
+        <footer class="bg-primary-800 text-gray-300 py-8">
             <div class="container mx-auto flex flex-wrap justify-around">
                 <!-- Sobre Nós -->
                 <div class="w-full sm:w-1/3 px-4 mb-6">
@@ -60,10 +61,10 @@
                 <div class="w-full sm:w-1/3 px-4 mb-6">
                 <h4 class="text-lg font-semibold mb-4">Links Úteis</h4>
                 <ul class="space-y-2">
-                    <li><a href="#servicos" class="hover:text-blue-400 transition">Serviços</a></li>
-                    <li><a href="#sobre" class="hover:text-blue-400 transition">Sobre</a></li>
-                    <li><a href="#contato" class="hover:text-blue-400 transition">Contato</a></li>
-                    <li><a href="#blog" class="hover:text-blue-400 transition">Blog</a></li>
+                    <li><a href="#servicos" class="hover:text-primary-400 transition">Serviços</a></li>
+                    <li><a href="#sobre" class="hover:text-primary-400 transition">Sobre</a></li>
+                    <li><a href="#contato" class="hover:text-primary-400 transition">Contato</a></li>
+                    <li><a href="#blog" class="hover:text-primary-400 transition">Blog</a></li>
                 </ul>
                 </div>
                 <!-- Contato -->
@@ -74,7 +75,7 @@
                 <p class="text-sm">Endereço: Rua Exemplo, 123, São Paulo</p>
                 </div>
             </div>
-            <div class="border-t border-gray-700 mt-6 pt-4 text-center">
+            <div class="border-t border-primary-700 mt-6 pt-4 text-center">
                 <p class="text-sm">&copy; 2024 Agência Criativa. Todos os direitos reservados.</p>
             </div>
             </footer>
