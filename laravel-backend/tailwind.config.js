@@ -23,6 +23,7 @@ module.exports = {
                     "950": "#1a2e05",
                 },
                 fundo: "#eef8ee",
+                paragrafo: "#1a3c33",
             },
         },
     },
