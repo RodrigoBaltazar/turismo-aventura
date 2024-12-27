@@ -28,23 +28,52 @@
     <body>
         <div class="relative min-h-screen flex flex-col bg-fundo">
             <!-- <nav class="flex-shrink-0 bg-primary-600"> -->
-            <nav class="flex-shrink-0 bg-primary-800">
+            <nav class="flex-shrink-0 bg-primary-950">
                 <div class="max-w-7xl mx-auto px-8">
                     <div class="relative flex items-center justify-between h-16">
-                        <div class="flex items-center px-2">
-                            <div class="flex-shrink-0">
-                                {{-- <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/workflow-mark-indigo-300.svg" alt="Workflow"> --}}
-                            </div>
-                        </div>
-
-                        <div class="block w-80">
-                            <div class="text-center">
-                                    Meu blog Portugal
-                            </div>
+                    <!-- Logo -->
+                    <div class="flex items-center px-2">
+                        <div class="flex-shrink-0">
+                        <img class="h-8 w-auto" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjfV8s62JzoTwVwN_siMf17lHJWALTJv7a4Q&s" alt="Workflow">
                         </div>
                     </div>
+
+                    <!-- Menu para Desktop -->
+                    <div class="hidden md:flex space-x-8">
+                        <a href="#inicio" class="text-white hover:text-primary-300">Início</a>
+                        <a href="#faq" class="text-white hover:text-primary-300">Perguntas Frequentes</a>
+                        <a href="#contato" class="text-white hover:text-primary-300">Contato</a>
+                    </div>
+
+                    <!-- Botão para Mobile -->
+                    <div class="md:hidden flex items-center">
+                        <button id="dropdown-button" class="text-white hover:text-primary-300 focus:outline-none">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                        </svg>
+                        </button>
+                    </div>
+                    </div>
                 </div>
-            </nav>
+
+                <!-- Dropdown para Mobile -->
+                <div id="dropdown-menu" class="hidden md:hidden bg-primary-800 text-white">
+                    <a href="#inicio" class="block px-4 py-2 hover:bg-primary-700">Início</a>
+                    <a href="#faq" class="block px-4 py-2 hover:bg-primary-700">Perguntas Frequentes</a>
+                    <a href="#contato" class="block px-4 py-2 hover:bg-primary-700">Contato</a>
+                </div>
+                </nav>
+
+                <script>
+                // Script para mostrar/ocultar o dropdown no mobile
+                const dropdownButton = document.getElementById("dropdown-button");
+                const dropdownMenu = document.getElementById("dropdown-menu");
+
+                dropdownButton.addEventListener("click", () => {
+                    dropdownMenu.classList.toggle("hidden");
+                });
+</script>
+
 
             @yield('body')
         </div>

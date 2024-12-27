@@ -7,7 +7,7 @@
     @foreach ($events as $event)
       <div class="bg-white border border-primary-200 rounded-lg shadow dark:bg-primary-800 dark:border-primary-700">
         <div class="p-5">
-          <a href="{{ route('events.show', $event->id) }}">
+          <a class="paragrafo" href="{{ route('events.show', $event->id) }}">
             <img class="rounded-t-lg w-full h-48 object-cover" src="cabo-estrelas.png" alt="{{ $event->name }}">
             <h2 class="mt-4 mb-2 text-xl font-bold tracking-tight text-primary-900 dark:text-white">{{ $event->name }}</h2>
             <p class="mb-3 font-normal text-primary-700 dark:text-primary-400">{{ Str::limit($event->excerpt, 100) }}</p>
